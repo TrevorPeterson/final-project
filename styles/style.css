@@ -1,0 +1,86 @@
+*{ /* * selects all elements */
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    margin:0; /*no more space between browser window & sections*/
+}
+nav, footer{
+    width: 100%;
+    height: 10vh; /*dimensions of navbar & footer*/
+}
+header, nav, footer, section, article, aside{
+    border: 1px solid black; /*border shows semantic layout*/
+    background-color: white; 
+}
+section, article{
+    width: 70%;
+    height: 70vh;
+}
+aside{
+    width: 30%;
+    height: 140vh;
+    float: right; /*positions the aside to the right of the section/article*/
+}
+nav{
+    position: sticky;
+    top:0; 
+    background-color: black; /*overrides white background (line 14)*/
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center; /*cenetered words vertically/horizontally*/
+}
+a{
+    text-decoration: none; /*removes underlines from links*/
+}
+nav > a{
+    font-weight: 600;
+    font-size: 25px;
+    margin: 20px;
+    color: inherit;
+    border: 3px solid transparent;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: border-color .15s, color .15s;
+}
+a:visited{
+    color: inherit; /*keep same color as parent element after visited*/
+}
+a:hover{
+    border-color: white;
+}
+a:visited:hover{
+    border-color: blue; /*only border color changes when page is visited */
+}
+a:active{
+    color: yellow;
+    border-color: yellow; /*blue border if visited already*/
+}
+.dropdown{
+    position: relative;
+    cursor: pointer;
+}
+.dropdown > ul{
+    display: none;
+    min-width: 100px;
+    box-shadow: 0px 2px 4px 1px black; /*set dimensions/color dropdown shadow*/
+}
+.dropdown:hover > ul{
+    display: flex;
+    flex-flow: column nowrap; /*words in dropdown stack vertically*/
+    position: absolute;
+    top:50px;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 4px;
+    padding:0px;
+}
+.dropdown > ul > li{
+    padding: 10px; /*adds space around items(within border)*/
+    list-style: none; /*removes bulletts from the left*/
+}
+.dropdown > ul > li:hover{
+    background-color: white;/*background same color as text?:*/
+    color: black; /*changes text color when hovered for visibility*/
+}
