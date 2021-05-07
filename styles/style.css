@@ -3,7 +3,7 @@
     font-family: sans-serif;
 }
 body{
-    margin:0; /*no more space between browser window & sections*/
+    margin:0; /*no space between browser window & border*/
 }
 nav, footer{
     width: 100%;
@@ -24,7 +24,7 @@ aside{
 }
 nav{
     position: sticky;
-    top:0; 
+    top: 0px; 
     background-color: black; /*overrides white background (line 14)*/
     color: white;
     display: flex;
@@ -34,15 +34,15 @@ nav{
 a{
     text-decoration: none; /*removes underlines from links*/
 }
-nav > a{
-    font-weight: 600;
-    font-size: 25px;
-    margin: 20px;
+nav > a{ /*styling for elements within nav*/
+    font-weight: 600; 
+    font-size: 25px; 
+    margin: 20px; 
     color: inherit;
     border: 3px solid transparent;
-    padding: 6px 10px;
+    padding: 6px 10px; 
     border-radius: 4px;
-    transition: border-color .15s, color .15s;
+    transition: color .15s;
 }
 a:visited{
     color: inherit; /*keep same color as parent element after visited*/
@@ -54,11 +54,10 @@ a:visited:hover{
     border-color: blue; /*only border color changes when page is visited */
 }
 a:active{
-    color: yellow;
     border-color: yellow; /*blue border if visited already*/
 }
 .dropdown{
-    position: relative;
+    position: relative; /*positions menu relative to the elements normal position*/
     cursor: pointer;
 }
 .dropdown > ul{
@@ -83,4 +82,14 @@ a:active{
 .dropdown > ul > li:hover{
     background-color: white;/*background same color as text?:*/
     color: black; /*changes text color when hovered for visibility*/
+}
+/*hero image styling:*/
+.hero-image{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url("/images/hero-image.jpg");
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
