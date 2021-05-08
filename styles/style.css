@@ -5,13 +5,9 @@
 body{
     margin:0; /*no space between browser window & border*/
 }
-nav, footer{
-    width: 100%;
-    height: 10vh; /*dimensions of navbar & footer*/
-}
 header, nav, footer, section, article, aside{
-    border: 1px solid black; /*border shows semantic layout*/
-    background-color: white; 
+    border: 1px solid black; /*border shows semantic layout of display elements*/
+    background-color: white; /*background color for selected elements*/ 
 }
 section, article{
     width: 70%;
@@ -22,7 +18,8 @@ aside{
     height: 140vh;
     float: right; /*positions the aside to the right of the section/article*/
 }
-nav{
+nav, footer{
+    height: 10vh;
     position: sticky;
     top: 0px; 
     background-color: black; /*overrides white background (line 14)*/
@@ -93,3 +90,26 @@ a:active{
     background-size: cover;
     position: relative;
 }
+/* footer with social media icon links (font awesome) */
+footer{
+    display: flex;
+    justify-content: center; /*centers everything in footer*/
+}
+.fa{
+    padding: 20px; /*padding makes space for icon shape*/
+    font-size: 30px; /*size of icon href*/
+    width: 50px; /*sets width for each icon container*/
+    margin: 10px 3px; /* 10px from top/bottom, 3px space in-between each icon*/
+}
+.fa-facebook{
+    background: #3B5998;
+    color: white;
+}
+.fa-google{
+    background: #dd4b39;
+    color: white;
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
