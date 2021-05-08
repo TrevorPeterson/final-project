@@ -4,10 +4,11 @@
 }
 body{
     margin:0; /*no space between browser window & border*/
+    min-height: 1200px; /*sets minimum height for all pages*/
 }
 header, nav, footer, section, article, aside{
     border: 1px solid black; /*border shows semantic layout of display elements*/
-    background-color: white; /*background color for selected elements*/ 
+    background-color: white; /*background color for selected elements*/
 }
 section, article{
     width: 70%;
@@ -21,8 +22,8 @@ aside{
 nav, footer{
     height: 10vh;
     position: sticky;
-    top: 0px; 
-    background-color: black; /*overrides white background (line 14)*/
+    top: 0px;
+    background-color: black;
     color: white;
     display: flex;
     justify-content: center;
@@ -32,14 +33,13 @@ a{
     text-decoration: none; /*removes underlines from links*/
 }
 nav > a{ /*styling for elements within nav*/
-    font-weight: 600; 
-    font-size: 25px; 
-    margin: 20px; 
-    color: inherit;
-    border: 3px solid transparent;
-    padding: 6px 10px; 
-    border-radius: 4px;
-    transition: color .15s;
+    font-weight: 600; /* makes font thicker*/
+    font-size: 25px;
+    margin: 20px; /* adds space between nav links*/
+    color: inherit; /*inherits white from parent element on lines 8-10*/
+    border: 3px solid transparent; /*makes border visible*/
+    padding: 1px 4px; /*space between text & border*/
+    border-radius: 5px; /*makes border corners round, not squared*/
 }
 a:visited{
     color: inherit; /*keep same color as parent element after visited*/
@@ -50,8 +50,8 @@ a:hover{
 a:visited:hover{
     border-color: blue; /*only border color changes when page is visited */
 }
-a:active{
-    border-color: yellow; /*blue border if visited already*/
+a:active, a:visited:active{
+    border-color: yellow; /*yellow border if active & visited already*/
 }
 .dropdown{
     position: relative; /*positions menu relative to the elements normal position*/
@@ -80,14 +80,14 @@ a:active{
     background-color: white;/*background same color as text?:*/
     color: black; /*changes text color when hovered for visibility*/
 }
-/*hero image styling:*/
+/*hero image styling(gradient):*/
 .hero-image{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)), url("/images/hero-image.jpg");
     height: 400px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; /*background covers available space*/
     position: relative;
 }
 /* footer with social media icon links (font awesome) */
@@ -100,6 +100,7 @@ footer{
     font-size: 30px; /*size of icon href*/
     width: 50px; /*sets width for each icon container*/
     margin: 10px 3px; /* 10px from top/bottom, 3px space in-between each icon*/
+    border-radius: 10px; /*rounds the corners of icon boxes*/
 }
 .fa-facebook{
     background: #3B5998;
@@ -113,3 +114,9 @@ footer{
     background: #55ACEE;
     color: white;
   }
+div{ /*creates white spice to scroll on contact & about pages*/
+    height: 1000px;
+}
+.dropdown{ /*positions logo & dropdown menu on nav bar*/
+    margin-top: 860px;
+}
