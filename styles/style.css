@@ -120,3 +120,30 @@ div{ /*creates white spice to scroll on contact & about pages*/
 .dropdown{ /*positions logo & dropdown menu on nav bar*/
     margin-top: 860px;
 }
+/*contact form using formspree, styling largely inspired by w3schools*/
+input[type=text], select, textarea{ /*selects inputs with type="text", select and text area attributes*/
+    width: 100%; /*stretches divs to both sides of window, making them stack vertically*/
+    padding: 20px; /*12 pixels of space in selected containers*/
+    border: 1px solid black; /*black border 1px large (sqaured)*/
+    border-radius: 4px; /*makes border corners rounded*/
+    box-sizing: border-box; /*keeps width and padding consistent*/
+    margin-top: 6px; /*adds 6px of space between text & container*/
+    margin-bottom: 16px; /*adds 16px of space below each container(input box)*/
+    resize: vertical horizontal; /*makes textarea resizable vertically & horizontally*/
+}
+input[type=submit] { /*styles the submit button*/
+    background-color: green; /*green background behind button*/
+    color: white; /*button text color*/
+    padding: 12px 20px; /*padding vertical & horizontal*/
+    border: none; /*invisible border*/
+    border-radius: 4px; /*makes button round*/
+    cursor: pointer; /*cursor is a pointer when user submits*/
+}
+input[type=submit]:hover { /*styling for when cursor is hovering over button*/
+    background-color: blue; /*dif background color when cursor hover*/
+}
+.contact-container{ /*styling for all containers in class="contact-container*/
+    border-radius: 5px; /*5px of space between border and container all round*/
+    background-color: whitesmoke; /*container color*/
+    padding: 20px; /*20px of space around containers*/
+}
