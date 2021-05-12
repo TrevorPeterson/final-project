@@ -6,6 +6,9 @@ body{
     margin:0; /*no space between browser window & border*/
     min-height: 1200px; /*sets minimum height for all pages*/
 }
+div{ 
+    height: 1000px; /*positions logo on nav bar by creating div space under*/
+}
 header, nav, footer, section, article, aside{
     border: 1px solid black; /*border shows semantic layout of display elements*/
     background-color: white; /*background color for selected elements*/
@@ -53,6 +56,7 @@ a:visited:hover{
 a:active, a:visited:active{
     border-color: yellow; /*yellow border if active & visited already*/
 }
+/*styling for dropdown menu:*/
 .dropdown{
     position: relative; /*positions menu relative to the elements normal position*/
     cursor: pointer;
@@ -83,12 +87,12 @@ a:active, a:visited:active{
 /*hero image styling(gradient):*/
 .hero-image{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)), url("/images/hero-image.jpg");
-    height: 400px;
-    background-position: center;
-    background-repeat: no-repeat;
+    rgba(0, 0, 0, 0.5)), url("/images/hero-image.jpg"); /*makes image appear gradient*/
+    height: 400px; /*sets height of image space*/
+    background-position: center; /*centers image in space*/
+    background-repeat: no-repeat; /*only 1 image*/
     background-size: cover; /*background covers available space*/
-    position: relative;
+    position: relative; /*relative to parent element*/
 }
 /* footer with social media icon links (font awesome) */
 footer{
@@ -102,7 +106,7 @@ footer{
     margin: 10px 3px; /* 10px from top/bottom, 3px space in-between each icon*/
     border-radius: 10px; /*rounds the corners of icon boxes*/
 }
-.fa-facebook{
+.fa-facebook{ /*colors for website logos found on w3schools.com:*/
     background: #3B5998;
     color: white;
 }
@@ -114,9 +118,6 @@ footer{
     background: #55ACEE;
     color: white;
   }
-div{ /*creates white spice to scroll on contact & about pages*/
-    height: 1000px;
-}
 .dropdown{ /*positions logo & dropdown menu on nav bar*/
     margin-top: 860px;
 }
@@ -146,4 +147,15 @@ input[type=submit]:hover { /*styling for when cursor is hovering over button*/
     border-radius: 5px; /*5px of space between border and container all round*/
     background-color: whitesmoke; /*container color*/
     padding: 20px; /*20px of space around containers*/
+}
+/*about page: (column structure inspired by w3schools)*/
+.row, .column{
+    box-sizing: border-box;
+}   
+.column{
+    float: left; /*aligns columns right next to eachother*/
+    width: 33%; /*creates space between the 3 divs*/
+    padding: 10px; /*10 px of space between divs and margins*/
+    height: 1000px; /* each column(div) 300px tall*/
+    border: 1px solid black; /*1px black border for visability purposes*/
 }
