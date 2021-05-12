@@ -155,7 +155,7 @@ input[type=submit]:hover { /*styling for when cursor is hovering over button*/
 .column{
     float: left; /*aligns columns right next to eachother*/
     width: 33%; /*creates space between the 3 divs*/
-    padding: 10px; /*10 px of space between divs and margins*/
+    padding: 20px; /*10 px of space between divs and margins*/
     height: 1000px; /* each column(div) 300px tall*/
     border: 1px solid black; /*1px black border for visability purposes*/
 }
